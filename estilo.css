@@ -1,0 +1,205 @@
+* {
+   font-family:Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    background-color: rgb(0, 0, 0);
+    color: #ffffff;
+}
+#carouselExampleCaptions {
+    width: 90%;            
+    max-width: 800px;      
+    margin: 40px auto;     
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    border-radius: 20px;   
+    overflow: hidden;     
+}
+.carousel-caption {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+.carousel-caption h5 {
+    font-size: 2.5rem !important; 
+    font-weight: bold;
+    text-transform: uppercase;     
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.9); 
+    margin-bottom: 10px;
+}
+.carousel-caption p {
+    font-size: 1.3rem !important; 
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.9);
+    max-width: 80%;              
+}
+.carousel-item img {
+    width: 100%;
+    height: 450px;         
+    object-fit: contain;   
+    background-color: #1a1a1a; 
+}
+
+.carousel-item:not(:first-child)::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #00000059;
+}
+.flexbox {
+    display: flex;
+    justify-content: space-around;
+    background-color: #77e477;
+    padding: 15px;
+}
+.flexbox a {
+    color: #000000;
+    font-weight: bold;
+    text-decoration: none;
+    justify-content: center ;
+    transition: color 0.3s ease;
+}
+.flexbox a:hover {
+    color: #0572bb; 
+}
+.hamburguesa {
+    display: none;
+}
+#menu-toggle {
+    display: none;
+} 
+
+.Titulo {
+    text-align: center;
+    padding: 20px 0 0 0;
+}
+.Titulo img {
+    padding: 0px;
+}
+.grid1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr ; 
+    gap: 20px;
+    padding: 20px;
+}
+
+.tarjeta-servicio {
+    text-align: center;
+    background-color: rgb(119, 228, 119);
+    border-radius: 20px;
+    padding: 25px 15px; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.tarjeta-servicio ul {
+    list-style-type: disc !important;
+    padding-left: 30px; 
+    text-align: left;  
+    margin-top: auto; 
+}
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    gap: 20px;
+    padding: 20px;
+}
+
+.tarjeta-trabajo {
+    background-color: rgb(5, 114, 187);
+    text-align: center;
+    border-radius: 25px;
+    padding: 15px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tarjeta-trabajo h3 {
+    color: white;
+    font-size: 1.15rem;
+    margin-bottom: 15px;
+}
+
+.contenedor-img-trabajo {
+    width: 100%;
+    height: 200px; 
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #f0f0f0; 
+}
+
+.tarjeta-trabajo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+.seccion-contacto {
+    text-align: center;
+    background-color: rgb(119, 228, 119);
+    border-radius: 20px;
+    padding: 30px 20px;
+    margin: 30px 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 768px) {
+    #menu-toggle {
+        display: none;
+    }
+    .hamburguesa {
+        display: block !important;
+        background-color: #77e477;
+        padding: 15px 20px;
+        cursor: pointer;
+    }
+    
+    .hamburguesa i {
+        color: #000000 !important;
+        font-size: 24px; 
+    }
+    .flexbox {
+        display: none;
+        flex-direction: column;
+        background-color: #77e477;
+        padding: 0 15px 15px 15px;
+    }
+    .flexbox a {
+        padding: 12px 0;
+        width: 100%;
+        text-align: left;
+        border-bottom: 1px solid rgba(0,0,0,0.08); 
+    }
+
+    #menu-toggle:checked ~ .flexbox {  
+        display: flex;
+    }
+    .grid1 {
+        grid-template-columns: 1fr;
+        gap: 15px; 
+        padding: 15px;
+    }
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 15px;
+    }
+    .contenedor-img-trabajo {
+        height: 250px; 
+    }
+    .seccion-contacto {
+        margin: 20px 10px;
+        padding: 20px 15px;
+    }
+}
